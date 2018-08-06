@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { fetchRandomData02 } from './data02';
+import './AboutMe.css';
+
 export default class AboutMe extends Component{
     constructor(props){
         super(props)
@@ -39,8 +41,8 @@ export default class AboutMe extends Component{
     render(){
       return (
         <div className="App"> 
+                  <button onClick={()=>{this.goBack()}} className="button">返回</button>
                   <div dangerouslySetInnerHTML={{ __html: this.state.data02.content }}></div>
-                  <button onClick={()=>{this.goBack()}} >返回</button>
         </div>
       )
     }
